@@ -270,26 +270,6 @@ These are real weaknesses in the current code. They are listed so nobody mistake
 11. **Database account.** The program is designed around the MySQL `root` user. A real deployment should use a dedicated account with only the privileges it needs.
 12. **Audit file is not tamper-evident.** It is an ordinary CSV that anyone with file access can edit.
 
-## Pushing this repository to GitHub
-
-1. Create an empty repository on GitHub (no README, `.gitignore` or license, since they already exist here).
-
-2. Open `LICENSE` and replace `[YOUR NAME]` with your name.
-
-3. From the project folder:
-
-   ```bash
-   git init
-   git add .
-   git commit -m "Initial commit: Secure E-Authentication System"
-   git branch -M main
-   git remote add origin https://github.com/<your-username>/secure-e-authentication-system.git
-   git push -u origin main
-   ```
-
-4. GitHub does not accept account passwords for pushes over HTTPS. When prompted, use a [personal access token](https://github.com/settings/tokens) as the password, or set up SSH and use the `git@github.com:<your-username>/secure-e-authentication-system.git` remote URL instead.
-
-Before pushing, check that no real database password is in the source code. The file reads credentials from environment variables, and the only fallback is the placeholder `root`.
 
 ## License
 
